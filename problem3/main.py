@@ -1,6 +1,15 @@
 def array_unique(arrayA, arrayB):
-    # your code here
-    return ''
+    unique_arr= []
+
+    for item in arrayA:
+        if item not in arrayB:
+            unique_arr.append(item)
+
+    for item in arrayB:
+        if item not in arrayA and item not in unique_arr:
+            unique_arr.append(item)
+
+    return unique_arr
 
 if __name__ == '__main__':
     print(array_unique([1, 2, 3, 4], [1, 3, 5, 10, 16])) # [2, 4]
