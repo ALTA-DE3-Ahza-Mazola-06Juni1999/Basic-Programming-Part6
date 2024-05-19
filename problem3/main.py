@@ -1,14 +1,10 @@
 def array_unique(arrayA, arrayB):
-    unique_arr= []
+    set_B = set(arrayB)
+    unique_arr = []
 
-    for item in arrayA:
-        if item not in arrayB:
-            unique_arr.append(item)
-
-    for item in arrayB:
-        if item not in arrayA and item not in unique_arr:
-            unique_arr.append(item)
-
+    for num in arrayA:
+        if num not in set_B:
+            unique_arr.append(num)
     return unique_arr
 
 if __name__ == '__main__':
